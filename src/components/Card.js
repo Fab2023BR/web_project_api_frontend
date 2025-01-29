@@ -9,7 +9,7 @@ export default function Card({ card, onCardClick, onCardLike, onCardDelete }) {
     !isOwn && "posts__trash-btn_hidden"
   }`;
 
-  const isLiked = card?.likes.some((user) => user._id === currentUser._id);
+  const isLiked = card?.likes.some((user) => user === currentUser._id);
   const cardLikeButtonClassName = `button posts__btn-like ${
     isLiked && "posts__btn-like_actived"
   }`;
